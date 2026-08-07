@@ -26,3 +26,5 @@ Los proyectos de fabricación computacional donde la forma final no se diseña a
 - [Asociativo](https://asociativo.com/)
 - [IG Personal](https://instagram.com/fefeliperoa)
 - [IG Asociativo](https://instagram.com/asociativo_)
+
+![Texto alternativo](assets/images/keica.png)
