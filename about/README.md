@@ -15,7 +15,7 @@
 
 ## Una pregunta que me interesa explorar
 
-¿Cómo puede un modelo computacional transformar información sobre geometría y materiales en decisiones de fabricación?
+¿Los sistemas computacionales pueden capturar "la realidad"?
 
 ## Algo que me inspira
 
