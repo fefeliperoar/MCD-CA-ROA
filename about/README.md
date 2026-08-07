@@ -12,6 +12,8 @@
 - Manufactura digital
 - Procesos productivos
 - U de chile
+-
+  
 ![charles](https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUydGlmZ29oMTBldWRobzRrOXRpZDdoM21oN2JwcXgyOGkyNHgzdzY5NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/56vSxGfGxVWF6I1yvA/200.gif)
 
 ## Una pregunta que me interesa explorar
