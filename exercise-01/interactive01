@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo 3D con Manos</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden;
+            font-family: Arial;
+            background: #000;
+        }
+        #canvas { 
+            display: block; 
+            width: 100%;
+            height: 100vh;
+        }
+        #video {
+            display: none;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 1.6;
+            z-index: 10;
+        }
+        #info p {
+            margin: 5px 0;
+        }
+        .active {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" width="1280" height="720" autoplay></video>
+    <div id="info">
+        <p>👆 <strong>Mano Derecha:</strong> Índice extendido = Rota</p>
+        <p>👌 <strong>Mano Izquierda:</strong> Pellizco = Escala</p>
+        <p id="status">Esperando detección...</p>
+        <p id="scale">Escala: 1.0</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@r128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+    <script>
+        // ===== CONFIGURACIÓN THREE.JS =====
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x1a1a1a);
+        document.body.appendChild(renderer.domElement);
+        
+        camera.position.set(0, 0, 5);
+        
+        // Iluminación
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        scene.add(ambientLight);
+        
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+        
+        // Variable para almacenar el modelo
+        let model = null;
+        let modelScale = 1.0;
+        const minScale = 0.5;
+        const maxScale = 3;
+        
+        // Cargar modelo GLB
+        const loader = new THREE.GLTFLoader();
+        loader.load('assets/models/tester.glb', (gltf) => {
+            model = gltf.scene;
+            scene.add(model);
+            console.log("Modelo tester.glb cargado");
+            document.getElementById('status').textContent = "✅ Modelo cargado - Usa tus manos";
+            document.getElementById('status').className = "active";
+        }, undefined, (error) => {
+            console.error("Error al cargar modelo:", error);
+            document.getElementById('status').textContent = "❌ Error cargando modelo";
+        });
+        
+        // ===== MEDIAPIPE HANDS =====
+        const hands = new Hands({
+            locateFileBase: 'https://cdn.jsdelivr.net/npm/@mediapipe/hands/'
+        });
+        
+        hands.setOptions({
+            maxNumHands: 2,
+            modelComplexity: 1,
+            minDetectionConfidence: 0.5,
+            minTrackingConfidence: 0.5
+        });
+        
+        hands.onResults(onHandsResults);
+        
+        const camera_hands = new Camera(document.getElementById("video"), {
+            onFrame: async () => {
+                await hands.send({ image: document.getElementById("video") });
+            },
+            width: 1280,
+            height: 720
+        });
+        
+        camera_hands.start();
+        
+        // ===== FUNCIONES AUXILIARES =====
+        
+        // Detectar si un dedo está extendido
+        function isFingerExtended(landmarks, fingerTips, fingerPIPs) {
+            // Un dedo está extendido si la punta está arriba (menor Y) que la articulación PIP
+            return landmarks[fingerTips].y < landmarks[fingerPIPs].y;
+        }
+        
+        // Calcular distancia entre dos puntos
+        function getDistance(point1, point2) {
+            const dx = point1.x - point2.x;
+            const dy = point1.y - point2.y;
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+        
+        // Procesar resultados de MediaPipe Hands
+        function onHandsResults(results) {
+            if (!results.multiHandLandmarks || !model) return;
+            
+            let rightHandFound = false;
+            let leftHandFound = false;
+            
+            results.multiHandLandmarks.forEach((landmarks, handIndex) => {
+                const handedness = results.multiHandedness[handIndex].label;
+                
+                if (handedness === 'Right') {
+                    rightHandFound = true;
+                    handleRightHand(landmarks);
+                } else if (handedness === 'Left') {
+                    leftHandFound = true;
+                    handleLeftHand(landmarks);
+                }
+            });
+            
+            if (!rightHandFound && !leftHandFound) {
+                document.getElementById('status').textContent = "⏳ Detectando manos...";
+            }
+        }
+        
+        // Controlar rotación con mano derecha (índice extendido)
+        function handleRightHand(landmarks) {
+            // Verificar si el índice está extendido
+            const indexExtended = isFingerExtended(landmarks, 8, 6); // 8=punta índice, 6=PIP índice
+            
+            if (indexExtended && model) {
+                document.getElementById('status').textContent = "🔄 Rotando...";
+                document.getElementById('status').className = "active";
+                
+                // Obtener posición del índice (punto 8)
+                const indexTip = landmarks[8];
+                
+                // Mapear posición a rotación (normalizar a -1 a 1)
+                const rotationX = (indexTip.y - 0.5) * Math.PI * 0.5;
+                const rotationY = (indexTip.x - 0.5) * Math.PI * 0.5;
+                
+                // Aplicar rotación suave
+                model.rotation.x += (rotationX - model.rotation.x) * 0.1;
+                model.rotation.y += (rotationY - model.rotation.y) * 0.1;
+            } else {
+                document.getElementById('status').textContent = "👉 Extiende tu índice derecho";
+            }
+        }
+        
+        // Controlar escala con mano izquierda (pellizco)
+        function handleLeftHand(landmarks) {
+            // Obtener posiciones del pulgar y índice
+            const thumbTip = landmarks[4];    // Punta del pulgar
+            const indexTip = landmarks[8];    // Punta del índice
+            
+            // Calcular distancia entre pulgar e índice
+            const pinchDistance = getDistance(thumbTip, indexTip);
+            
+            // Si la distancia es pequeña, es un pellizco
+            const pinchThreshold = 0.05;
+            
+            if (pinchDistance < pinchThreshold && model) {
+                document.getElementById('status').textContent = "📏 Escalando...";
+                document.getElementById('status').className = "active";
+                
+                // Mapear distancia a escala (cuanto más lejos, más grande)
+                // Usar el valor inverso: distancia pequeña = pellizco = escala pequeña
+                const scaleFactor = 0.5 + (0.05 / pinchDistance) * 0.3;
+                modelScale = Math.max(minScale, Math.min(maxScale, scaleFactor));
+                
+                model.scale.set(modelScale, modelScale, modelScale);
+                
+                document.getElementById('scale').textContent = `Escala: ${modelScale.toFixed(2)}`;
+                document.getElementById('scale').className = "active";
+            } else {
+                document.getElementById('status').textContent = "🤌 Pellizca para escalar";
+            }
+        }
+        
+        // ===== ANIMACIÓN =====
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        animate();
+        
+        // Manejar redimensionamiento
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
