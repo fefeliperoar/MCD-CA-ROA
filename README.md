@@ -34,7 +34,7 @@ Repositorio de trabajo individual para el curso. Este repositorio acompañará t
 
 ## Entregas
 
-- [Ejercicio 1](https://fefeliperoar.github.io/MCD-CA-ROA/exercise-01/interactive01.html): `exercise-01/`
+- [Ejercicio 1](https://fefeliperoar.github.io/MCD-CA-ROA/): `exercise-01/`
 - [Ejercicio 2](https://fefeliperoar.github.io/MCD-CA-ROA/lab_02/DifferentialGrowth/): `lab_02/DifferentialGrowth/`
 - Proyecto final: `project/`
 
