@@ -1,4 +1,4 @@
-# Campo de Datos · Universidad de Chile — Ejercicio 02
+# Campo de Datos · Universidad de Chile — Ejercicio 03
 
 Computación Avanzada · Magíster en Ciencias del Diseño · Universidad Adolfo Ibáñez
 
@@ -111,12 +111,12 @@ Usa VS Code + Live Server (no requiere build ni instalación de dependencias: Th
 
 ## Publicación
 
-Esta carpeta está pensada para copiarse tal cual como `/exercise-02/` dentro del repositorio del curso y publicarse con GitHub Pages.
+Esta carpeta está pensada para copiarse tal cual como `/exercise-03/` dentro del repositorio del curso y publicarse con GitHub Pages.
 
 ## Archivos
 
 ```text
-exercise-02/
+exercise-03/
 ├── index.html
 ├── styles.css
 ├── main.js
