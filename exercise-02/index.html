@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campo de Datos · Universidad de Chile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="viewport-shell">
+      <header class="project-header">
+        <p class="eyebrow">COMPUTACIÓN AVANZADA · MCD UAI · EJERCICIO 02</p>
+        <h1>Campo de Datos · Universidad de Chile</h1>
+        <p class="subtitle">Toda la temporada de la U en el Campeonato Nacional 2026, transformada en un campo de partidos: cada módulo es un resultado.</p>
+      </header>
+
+      <div id="viewport"></div>
+
+      <div class="legend">
+        <span><i class="dot win"></i>Victoria</span>
+        <span><i class="dot draw"></i>Empate</span>
+        <span><i class="dot loss"></i>Derrota</span>
+      </div>
+
+      <div class="hint">Arrastra para orbitar · Rueda para acercar · Click en un partido para inspeccionarlo</div>
+    </section>
+
+    <aside class="controls-panel">
+      <div class="panel-header">
+        <p class="eyebrow">FUENTE + REPRESENTACIÓN</p>
+        <h2>Sistema vivo</h2>
+      </div>
+
+      <section class="status-card">
+        <div class="status-row">
+          <span>Fuente</span>
+          <strong id="fuente-label">Cargando…</strong>
+        </div>
+        <div class="status-row">
+          <span>Estado</span>
+          <strong id="estado-label"><i class="status-dot"></i> conectando</strong>
+        </div>
+        <div class="status-row">
+          <span>Temporada</span>
+          <strong id="temporada-label">—</strong>
+        </div>
+        <div class="status-row">
+          <span>Última actualización</span>
+          <strong id="actualizacion-label">—</strong>
+        </div>
+        <div class="status-row">
+          <span>Próxima consulta</span>
+          <strong id="cuenta-regresiva">—</strong>
+        </div>
+      </section>
+
+      <section class="control-group">
+        <h3>Representación</h3>
+
+        <label class="select-label">
+          <span>Distribución</span>
+          <div class="segmented" role="tablist" aria-label="Modo de distribución">
+            <button
+              type="button"
+              class="segmented-option active"
+              data-modo="cronologico"
+              role="tab"
+              aria-selected="true"
+            >
+              Cronológica
+            </button>
+            <button
+              type="button"
+              class="segmented-option"
+              data-modo="resultado"
+              role="tab"
+              aria-selected="false"
+            >
+              Agrupada
+            </button>
+          </div>
+        </label>
+
+        <label>
+          <span>Escala vertical</span>
+          <output id="escala-altura-valor">0.55</output>
+          <input id="escala-altura" type="range" min="0.2" max="1.2" step="0.05" value="0.55" />
+        </label>
+
+        <label>
+          <span>N° partidos</span>
+          <output id="cantidad-valor">15</output>
+          <input id="cantidad" type="range" min="3" max="34" step="1" value="15" />
+        </label>
+      </section>
+
+      <section class="mapping">
+        <h3>Reglas de representación</h3>
+        <div class="map-row"><b>orden cronológico</b><span>→</span><em>posición X</em></div>
+        <div class="map-row"><b>local / visitante</b><span>→</span><em>posición Z (carril)</em></div>
+        <div class="map-row"><b>diferencia de goles</b><span>→</span><em>altura del módulo</em></div>
+        <div class="map-row"><b>resultado (G/E/P)</b><span>→</span><em>color del módulo</em></div>
+        <div class="map-row"><b>goles a favor</b><span>→</span><em>volumen interior</em></div>
+      </section>
+
+      <section class="status-card standings" id="tabla-panel" hidden>
+        <h3>Tabla · Primera División</h3>
+        <div class="status-row">
+          <span>Posición</span>
+          <strong id="tabla-posicion">—</strong>
+        </div>
+        <div class="status-row">
+          <span>PJ · Pts</span>
+          <strong id="tabla-puntos">—</strong>
+        </div>
+        <div class="status-row">
+          <span>Diferencia de gol</span>
+          <strong id="tabla-diferencia">—</strong>
+        </div>
+      </section>
+
+      <section class="status-card proximos" id="proximos-panel" hidden>
+        <h3>Próximos partidos</h3>
+        <div id="proximos-lista"></div>
+      </section>
+
+      <section class="inspector">
+        <h3>Partido seleccionado</h3>
+        <p id="partido-titulo">Haz click sobre un módulo.</p>
+        <div class="metric-grid">
+          <div><span>Marcador</span><strong id="m-marcador">—</strong></div>
+          <div><span>Condición</span><strong id="m-condicion">—</strong></div>
+          <div><span>Competencia</span><strong id="m-competencia">—</strong></div>
+          <div><span>Fecha</span><strong id="m-fecha">—</strong></div>
+        </div>
+        <div id="detalle-partido" class="detalle-partido">
+          <p class="detalle-estado">Selecciona un partido para ver formación, goles por minuto y tarjetas.</p>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="actualizar">Actualizar ahora</button>
+        <button id="pausar" class="secondary">Pausar auto</button>
+      </div>
+    </aside>
+  </main>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -34,8 +34,8 @@ Repositorio de trabajo individual para el curso. Este repositorio acompañará t
 
 ## Entregas
 
-- Ejercicio 1: `exercise-01/`
-- Ejercicio 2: `exercise-02/`
+- Ejercicio 1: [`exercise-01/`](https://fefeliperoar.github.io/MCD-CA-ROA/exercise-01/interactive01.html)
+- Ejercicio 2: [`exercise-02/`](https://fefeliperoar.github.io/MCD-CA-ROA/exercise-02/) — Campo de Datos, Universidad de Chile
 - Proyecto final: `project/`
 
 > Publica solamente información que te acomode dejar visible en internet. No incluyas dirección, teléfono, RUN/RUT, contraseñas, tokens ni otra información sensible.

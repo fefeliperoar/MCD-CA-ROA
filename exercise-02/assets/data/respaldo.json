@@ -1,0 +1,1034 @@
+{
+  "tipo": "dataset_didactico_respaldo",
+  "descripcion": "Temporada sintética completa (30 fechas) de Universidad de Chile en el Campeonato Nacional 2026, con detalle de goles, tarjetas, formación y alineación por número de camiseta. Estos datos NO son reales: se usan solo si TheSportsDB no responde.",
+  "actualizado": "local",
+  "equipo": "Universidad de Chile",
+  "partidos": [
+    {
+      "id": "demo-01",
+      "jornada": 1,
+      "fecha": "2026-03-01",
+      "rival": "Colo-Colo",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          2,
+          5,
+          8,
+          11,
+          19,
+          27
+        ],
+        "alineacionVisita": [
+          8,
+          11,
+          19,
+          27,
+          2,
+          5
+        ],
+        "golesLocal": "12' · #2; 41' · #3",
+        "golesVisita": "29' · #5",
+        "amarillasLocal": "31' · #4; 42' · #5",
+        "amarillasVisita": "30' · #8; 41' · #9",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-02",
+      "jornada": 2,
+      "fecha": "2026-03-08",
+      "rival": "Universidad Católica",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          3,
+          6,
+          9,
+          14,
+          21,
+          30
+        ],
+        "alineacionVisita": [
+          9,
+          14,
+          21,
+          30,
+          3,
+          6
+        ],
+        "golesLocal": "18' · #3",
+        "golesVisita": "34' · #6",
+        "amarillasLocal": "32' · #5; 43' · #6; 54' · #7",
+        "amarillasVisita": "31' · #9",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-03",
+      "jornada": 3,
+      "fecha": "2026-03-15",
+      "rival": "Palestino",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 3,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          4,
+          7,
+          10,
+          17,
+          23,
+          1
+        ],
+        "alineacionVisita": [
+          10,
+          17,
+          23,
+          1,
+          4,
+          7
+        ],
+        "golesLocal": "23' · #4; 58' · #5; 81' · #6",
+        "golesVisita": "",
+        "amarillasLocal": "33' · #6",
+        "amarillasVisita": "25' · #10; 36' · #11",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-04",
+      "jornada": 4,
+      "fecha": "2026-03-22",
+      "rival": "Cobresal",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-1-4-1",
+        "formacionVisita": "4-2-3-1",
+        "alineacionLocal": [
+          5,
+          8,
+          11,
+          19,
+          27,
+          2
+        ],
+        "alineacionVisita": [
+          11,
+          19,
+          27,
+          2,
+          5,
+          8
+        ],
+        "golesLocal": "29' · #5; 63' · #6",
+        "golesVisita": "",
+        "amarillasLocal": "34' · #7; 45' · #8",
+        "amarillasVisita": "26' · #11",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-05",
+      "jornada": 5,
+      "fecha": "2026-03-29",
+      "rival": "Huachipato",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-3-3",
+        "formacionVisita": "4-4-2",
+        "alineacionLocal": [
+          6,
+          9,
+          14,
+          21,
+          30,
+          3
+        ],
+        "alineacionVisita": [
+          14,
+          21,
+          30,
+          3,
+          6,
+          9
+        ],
+        "golesLocal": "34' · #6",
+        "golesVisita": "",
+        "amarillasLocal": "35' · #8; 46' · #9; 57' · #10",
+        "amarillasVisita": "27' · #14; 38' · #17",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-06",
+      "jornada": 6,
+      "fecha": "2026-04-05",
+      "rival": "Everton",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          7,
+          10,
+          17,
+          23,
+          1,
+          4
+        ],
+        "alineacionVisita": [
+          17,
+          23,
+          1,
+          4,
+          7,
+          10
+        ],
+        "golesLocal": "41' · #7; 71' · #8",
+        "golesVisita": "63' · #10; 87' · #11",
+        "amarillasLocal": "36' · #9",
+        "amarillasVisita": "28' · #17",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-07",
+      "jornada": 7,
+      "fecha": "2026-04-12",
+      "rival": "Unión Española",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          8,
+          11,
+          19,
+          27,
+          2,
+          5
+        ],
+        "alineacionVisita": [
+          19,
+          27,
+          2,
+          5,
+          8,
+          11
+        ],
+        "golesLocal": "",
+        "golesVisita": "",
+        "amarillasLocal": "30' · #10; 41' · #11",
+        "amarillasVisita": "29' · #19; 40' · #21",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-08",
+      "jornada": 8,
+      "fecha": "2026-04-19",
+      "rival": "Ñublense",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 4,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          9,
+          14,
+          21,
+          30,
+          3,
+          6
+        ],
+        "alineacionVisita": [
+          21,
+          30,
+          3,
+          6,
+          9,
+          14
+        ],
+        "golesLocal": "58' · #9",
+        "golesVisita": "4' · #17; 34' · #19; 67' · #21; 71' · #14",
+        "amarillasLocal": "31' · #11; 42' · #14; 53' · #17",
+        "amarillasVisita": "30' · #21",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-09",
+      "jornada": 9,
+      "fecha": "2026-04-26",
+      "rival": "Audax Italiano",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 3,
+      "detalle": {
+        "formacionLocal": "4-1-4-1",
+        "formacionVisita": "4-2-3-1",
+        "alineacionLocal": [
+          10,
+          17,
+          23,
+          1,
+          4,
+          7
+        ],
+        "alineacionVisita": [
+          23,
+          1,
+          4,
+          7,
+          10,
+          17
+        ],
+        "golesLocal": "63' · #10",
+        "golesVisita": "12' · #19; 41' · #21; 76' · #17",
+        "amarillasLocal": "32' · #14",
+        "amarillasVisita": "31' · #23; 42' · #27",
+        "rojasLocal": "72' · #14",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-10",
+      "jornada": 10,
+      "fecha": "2026-05-03",
+      "rival": "Coquimbo Unido",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-3-3",
+        "formacionVisita": "4-4-2",
+        "alineacionLocal": [
+          11,
+          19,
+          27,
+          2,
+          5,
+          8
+        ],
+        "alineacionVisita": [
+          27,
+          2,
+          5,
+          8,
+          11,
+          19
+        ],
+        "golesLocal": "",
+        "golesVisita": "18' · #21; 81' · #19",
+        "amarillasLocal": "33' · #17; 44' · #19",
+        "amarillasVisita": "25' · #27",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-11",
+      "jornada": 11,
+      "fecha": "2026-05-10",
+      "rival": "O'Higgins",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          14,
+          21,
+          30,
+          3,
+          6,
+          9
+        ],
+        "alineacionVisita": [
+          30,
+          3,
+          6,
+          9,
+          14,
+          21
+        ],
+        "golesLocal": "",
+        "golesVisita": "87' · #21",
+        "amarillasLocal": "34' · #19; 45' · #21; 56' · #23",
+        "amarillasVisita": "26' · #30; 37' · #1",
+        "rojasLocal": "",
+        "rojasVisita": "80' · #21"
+      }
+    },
+    {
+      "id": "demo-12",
+      "jornada": 12,
+      "fecha": "2026-05-17",
+      "rival": "Deportes Iquique",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 3,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          17,
+          23,
+          1,
+          4,
+          7,
+          10
+        ],
+        "alineacionVisita": [
+          1,
+          4,
+          7,
+          10,
+          17,
+          23
+        ],
+        "golesLocal": "12' · #19; 76' · #17",
+        "golesVisita": "29' · #27; 63' · #30; 90' · #23",
+        "amarillasLocal": "35' · #21",
+        "amarillasVisita": "27' · #1",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-13",
+      "jornada": 13,
+      "fecha": "2026-05-24",
+      "rival": "Deportes La Serena",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          19,
+          27,
+          2,
+          5,
+          8,
+          11
+        ],
+        "alineacionVisita": [
+          2,
+          5,
+          8,
+          11,
+          19,
+          27
+        ],
+        "golesLocal": "81' · #19",
+        "golesVisita": "4' · #27",
+        "amarillasLocal": "36' · #23; 47' · #27",
+        "amarillasVisita": "28' · #2; 39' · #3",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-14",
+      "jornada": 14,
+      "fecha": "2026-05-31",
+      "rival": "Unión La Calera",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-1-4-1",
+        "formacionVisita": "4-2-3-1",
+        "alineacionLocal": [
+          21,
+          30,
+          3,
+          6,
+          9,
+          14
+        ],
+        "alineacionVisita": [
+          3,
+          6,
+          9,
+          14,
+          21,
+          30
+        ],
+        "golesLocal": "87' · #21",
+        "golesVisita": "12' · #30; 41' · #1",
+        "amarillasLocal": "30' · #27; 41' · #30; 52' · #1",
+        "amarillasVisita": "29' · #3",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-15",
+      "jornada": 15,
+      "fecha": "2026-06-07",
+      "rival": "Deportes Limache",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 3,
+      "detalle": {
+        "formacionLocal": "4-3-3",
+        "formacionVisita": "4-4-2",
+        "alineacionLocal": [
+          23,
+          1,
+          4,
+          7,
+          10,
+          17
+        ],
+        "alineacionVisita": [
+          4,
+          7,
+          10,
+          17,
+          23,
+          1
+        ],
+        "golesLocal": "",
+        "golesVisita": "18' · #1; 52' · #2; 76' · #3",
+        "amarillasLocal": "31' · #30",
+        "amarillasVisita": "30' · #4; 41' · #5",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-16",
+      "jornada": 16,
+      "fecha": "2026-06-14",
+      "rival": "Colo-Colo",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          27,
+          2,
+          5,
+          8,
+          11,
+          19
+        ],
+        "alineacionVisita": [
+          5,
+          8,
+          11,
+          19,
+          27,
+          2
+        ],
+        "golesLocal": "4' · #27",
+        "golesVisita": "23' · #2; 58' · #3",
+        "amarillasLocal": "32' · #1; 43' · #2",
+        "amarillasVisita": "31' · #5",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-17",
+      "jornada": 17,
+      "fecha": "2026-06-21",
+      "rival": "Universidad Católica",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          30,
+          3,
+          6,
+          9,
+          14,
+          21
+        ],
+        "alineacionVisita": [
+          6,
+          9,
+          14,
+          21,
+          30,
+          3
+        ],
+        "golesLocal": "12' · #30",
+        "golesVisita": "29' · #3",
+        "amarillasLocal": "33' · #2; 44' · #3; 55' · #4",
+        "amarillasVisita": "25' · #6; 36' · #7",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-18",
+      "jornada": 18,
+      "fecha": "2026-06-28",
+      "rival": "Palestino",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 3,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          1,
+          4,
+          7,
+          10,
+          17,
+          23
+        ],
+        "alineacionVisita": [
+          7,
+          10,
+          17,
+          23,
+          1,
+          4
+        ],
+        "golesLocal": "",
+        "golesVisita": "34' · #4; 67' · #5; 90' · #6",
+        "amarillasLocal": "34' · #3",
+        "amarillasVisita": "26' · #7",
+        "rojasLocal": "74' · #3",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-19",
+      "jornada": 19,
+      "fecha": "2026-07-05",
+      "rival": "Cobresal",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-1-4-1",
+        "formacionVisita": "4-2-3-1",
+        "alineacionLocal": [
+          2,
+          5,
+          8,
+          11,
+          19,
+          27
+        ],
+        "alineacionVisita": [
+          8,
+          11,
+          19,
+          27,
+          2,
+          5
+        ],
+        "golesLocal": "",
+        "golesVisita": "41' · #5; 71' · #6",
+        "amarillasLocal": "35' · #4; 46' · #5",
+        "amarillasVisita": "27' · #8; 38' · #9",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-20",
+      "jornada": 20,
+      "fecha": "2026-07-12",
+      "rival": "Huachipato",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-3-3",
+        "formacionVisita": "4-4-2",
+        "alineacionLocal": [
+          3,
+          6,
+          9,
+          14,
+          21,
+          30
+        ],
+        "alineacionVisita": [
+          9,
+          14,
+          21,
+          30,
+          3,
+          6
+        ],
+        "golesLocal": "",
+        "golesVisita": "52' · #6",
+        "amarillasLocal": "36' · #5; 47' · #6; 58' · #7",
+        "amarillasVisita": "28' · #9",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-21",
+      "jornada": 21,
+      "fecha": "2026-07-19",
+      "rival": "Everton",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          4,
+          7,
+          10,
+          17,
+          23,
+          1
+        ],
+        "alineacionVisita": [
+          10,
+          17,
+          23,
+          1,
+          4,
+          7
+        ],
+        "golesLocal": "34' · #4; 67' · #5",
+        "golesVisita": "58' · #7; 81' · #8",
+        "amarillasLocal": "30' · #6",
+        "amarillasVisita": "29' · #10; 40' · #11",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-22",
+      "jornada": 22,
+      "fecha": "2026-07-26",
+      "rival": "Unión Española",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          5,
+          8,
+          11,
+          19,
+          27,
+          2
+        ],
+        "alineacionVisita": [
+          11,
+          19,
+          27,
+          2,
+          5,
+          8
+        ],
+        "golesLocal": "",
+        "golesVisita": "",
+        "amarillasLocal": "31' · #7; 42' · #8",
+        "amarillasVisita": "30' · #11",
+        "rojasLocal": "",
+        "rojasVisita": "77' · #8"
+      }
+    },
+    {
+      "id": "demo-23",
+      "jornada": 23,
+      "fecha": "2026-08-02",
+      "rival": "Ñublense",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 4,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          6,
+          9,
+          14,
+          21,
+          30,
+          3
+        ],
+        "alineacionVisita": [
+          14,
+          21,
+          30,
+          3,
+          6,
+          9
+        ],
+        "golesLocal": "12' · #8; 41' · #9; 52' · #6; 76' · #7",
+        "golesVisita": "67' · #9",
+        "amarillasLocal": "32' · #8; 43' · #9; 54' · #10",
+        "amarillasVisita": "31' · #14; 42' · #17",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-24",
+      "jornada": 24,
+      "fecha": "2026-08-09",
+      "rival": "Audax Italiano",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 3,
+      "detalle": {
+        "formacionLocal": "4-1-4-1",
+        "formacionVisita": "4-2-3-1",
+        "alineacionLocal": [
+          7,
+          10,
+          17,
+          23,
+          1,
+          4
+        ],
+        "alineacionVisita": [
+          17,
+          23,
+          1,
+          4,
+          7,
+          10
+        ],
+        "golesLocal": "18' · #9; 58' · #7; 81' · #8",
+        "golesVisita": "71' · #10",
+        "amarillasLocal": "33' · #9",
+        "amarillasVisita": "25' · #17",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-25",
+      "jornada": 25,
+      "fecha": "2026-08-16",
+      "rival": "Coquimbo Unido",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 2,
+      "golesContra": 0,
+      "detalle": {
+        "formacionLocal": "4-3-3",
+        "formacionVisita": "4-4-2",
+        "alineacionLocal": [
+          8,
+          11,
+          19,
+          27,
+          2,
+          5
+        ],
+        "alineacionVisita": [
+          19,
+          27,
+          2,
+          5,
+          8,
+          11
+        ],
+        "golesLocal": "63' · #8; 87' · #9",
+        "golesVisita": "",
+        "amarillasLocal": "34' · #10; 45' · #11",
+        "amarillasVisita": "26' · #19; 37' · #21",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-26",
+      "jornada": 26,
+      "fecha": "2026-08-23",
+      "rival": "O'Higgins",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 0,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "4-2-3-1",
+        "formacionVisita": "3-5-2",
+        "alineacionLocal": [
+          9,
+          14,
+          21,
+          30,
+          3,
+          6
+        ],
+        "alineacionVisita": [
+          21,
+          30,
+          3,
+          6,
+          9,
+          14
+        ],
+        "golesLocal": "67' · #9",
+        "golesVisita": "",
+        "amarillasLocal": "35' · #11; 46' · #14; 57' · #17",
+        "amarillasVisita": "27' · #21",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-27",
+      "jornada": 27,
+      "fecha": "2026-08-30",
+      "rival": "Deportes Iquique",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 3,
+      "golesContra": 2,
+      "detalle": {
+        "formacionLocal": "4-4-2",
+        "formacionVisita": "4-1-4-1",
+        "alineacionLocal": [
+          10,
+          17,
+          23,
+          1,
+          4,
+          7
+        ],
+        "alineacionVisita": [
+          23,
+          1,
+          4,
+          7,
+          10,
+          17
+        ],
+        "golesLocal": "4' · #11; 34' · #14; 71' · #10",
+        "golesVisita": "23' · #19; 87' · #17",
+        "amarillasLocal": "36' · #14",
+        "amarillasVisita": "28' · #23; 39' · #27",
+        "rojasLocal": "76' · #14",
+        "rojasVisita": ""
+      }
+    },
+    {
+      "id": "demo-28",
+      "jornada": 28,
+      "fecha": "2026-09-06",
+      "rival": "Deportes La Serena",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026",
+      "golesFavor": 1,
+      "golesContra": 1,
+      "detalle": {
+        "formacionLocal": "3-5-2",
+        "formacionVisita": "4-3-3",
+        "alineacionLocal": [
+          11,
+          19,
+          27,
+          2,
+          5,
+          8
+        ],
+        "alineacionVisita": [
+          27,
+          2,
+          5,
+          8,
+          11,
+          19
+        ],
+        "golesLocal": "76' · #11",
+        "golesVisita": "90' · #19",
+        "amarillasLocal": "30' · #17; 41' · #19",
+        "amarillasVisita": "29' · #27",
+        "rojasLocal": "",
+        "rojasVisita": ""
+      }
+    }
+  ],
+  "proximos": [
+    {
+      "id": "demo-29",
+      "jornada": 29,
+      "fecha": "2026-09-13",
+      "rival": "Unión La Calera",
+      "esLocal": true,
+      "competencia": "Primera División · Campeonato Nacional 2026"
+    },
+    {
+      "id": "demo-30",
+      "jornada": 30,
+      "fecha": "2026-09-20",
+      "rival": "Deportes Limache",
+      "esLocal": false,
+      "competencia": "Primera División · Campeonato Nacional 2026"
+    }
+  ]
+}
